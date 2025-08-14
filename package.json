@@ -1,0 +1,25 @@
+{
+  "name": "website-design",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "mix",
+    "watch": "mix watch",
+    "prod": "mix --production"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.7",
+    "clean-webpack-plugin": "^4.0.0",
+    "jquery": "^3.7.1",
+    "laravel-mix": "^6.0.49",
+    "laravel-mix-clean": "^0.1.0",
+    "owl.carousel": "^2.3.4",
+    "webpack": "^5.94.0",
+    "sass":"^1.77.0",
+    "sass-loader": "^13.3.2",
+    "magnific-popup": "^1.1.0"
+  }
+}
