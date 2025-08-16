@@ -5,7 +5,7 @@ require_once 'inc/enqueue.php';
 require_once 'custom-types/review.php';
 require_once 'inc/clear.php';
 require_once 'inc/core.php';
-require_once 'inc/last_news.php';
+
 
 
 add_action('wpcf7_mail_sent', 'cf7_send_tg', 10, 3);
