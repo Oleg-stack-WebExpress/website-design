@@ -1,0 +1,26 @@
+body {
+    background-color: #222831;
+
+    .reviews-section {
+
+        background:  url('../images/doodle items.png') no-repeat center center;
+        background-size: cover;
+        padding: 1rem 0;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            
+            z-index: 0;
+        }
+
+        .why-we__title {
+            color: #EEEEEE;
+        }
+    }
+}

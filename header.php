@@ -13,30 +13,31 @@
 </head>
 
 <body>
+<section class="menu">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #222831;">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <?php
+                wp_nav_menu([
+                    'theme_location' => 'top',
+                    'depth' => 2,
+                    'container' => false,
+                    'menu_class' => 'navbar-nav gap-lg-5 gap-3',
+                    'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+                    'walker' => new WP_Bootstrap_Navwalker(),
+                    'link_class' => 'nav-link px-3 py-2 rounded' // Добавляем классы для ссылок
+                ]);
+                ?>
+            </div>
+        </div>
+    </nav>
+</section>
 
-  <!--<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
 
-        <?php
-        /*wp_nav_menu([
-          'theme_location' => 'top',
-          'depth' => 2,
-          'container' => 'ul',
-          'container_class' => 'navbar-nav mr-auto',
-          'container_id' => 'bs-example-navbar-collapse-1',
-          'menu_class' => 'navbar-nav ms-auto',
-          'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
-          'walker' => new WP_Bootstrap_Navwalker()
-        ]);*/
-        ?>
-
-        
-      </div>
-    </div>
+  </div>
+  </div>
   </nav>
