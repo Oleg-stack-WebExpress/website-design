@@ -3,7 +3,7 @@
 get_header();
 
 ?>
-<section id="reviews" class="reviews-section">
+<section id="recent-works" class="recent-works-section">
     <div class="container">
 
 
@@ -17,8 +17,8 @@ get_header();
     <div class="container container-carousel">
 
         <!-- Вставляем шорткод с дополнительными классами стилизации -->
-        <div class="reviews-carousel-wrapper" style="text-align: center">
-            <?php echo do_shortcode('[review-list count="6"]'); ?>
+        <div class="recent-works-carousel-wrapper" style="text-align: center">
+            <?php echo do_shortcode('[recent-works-list count="6"]'); ?>
 
         </div>
     </div>
@@ -27,6 +27,7 @@ get_header();
 
 <section class="block-form">
     <div class="container">
+        <div class="mail-icon"></div>
         <div class="row">
             <div class="col-6">
                 <div class="why-we__title"><a href="<?php echo esc_url(home_url('/')); ?>"

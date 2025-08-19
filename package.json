@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "mix",
     "watch": "mix watch",
-    "prod": "mix --production"
+    "prod": "mix --production", 
+    "build": "your-build-command",
+    "build:fonts": "cp -r node_modules/fontello/fonts/ public/fonts/ && cp node_modules/fontello/css/fontello.css public/css/"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +22,11 @@
     "webpack": "^5.94.0",
     "sass":"^1.77.0",
     "sass-loader": "^13.3.2",
-    "magnific-popup": "^1.1.0"
+    "magnific-popup": "^1.1.0",
+    "fontello": "^0.1.0"
+  },
+  "devDependencies": {
+    "fontello-cli": "^0.1.0"
   }
 }
+

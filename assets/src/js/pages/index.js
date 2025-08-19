@@ -7,7 +7,7 @@ jQuery.noConflict();
 })(jQuery);
 
 jQuery(document).ready(function ($) {
-    $(".owl-carousel").owlCarousel({
+    $(".owl-recent-works").owlCarousel({
         loop: true,
         autoplay: true,
         interval: 3000,
@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
                 nav: false
             },
             1000: {
-                items: 5,
+                items: 3,
                 nav: true,
                 loop: false
             }

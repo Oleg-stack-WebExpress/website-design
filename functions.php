@@ -2,7 +2,7 @@
 require_once 'inc/WP_Bootstrap_Navwalker.php';
 require_once 'inc/areas.php';
 require_once 'inc/enqueue.php';
-require_once 'custom-types/review.php';
+require_once 'custom-types/recent-works.php';
 require_once 'inc/clear.php';
 require_once 'inc/core.php';
 
@@ -21,3 +21,20 @@ function cf7_send_tg($contact_form)
 
     wp_remote_get($url);
 }
+
+function enqueue_fontello_styles() {
+    wp_enqueue_style('fontello', get_template_directory_uri() . '/assets/fontello/css/fontello.css');
+}
+add_action('wp_enqueue_scripts', 'enqueue_fontello_styles');
+
+function cf7_icon_button_shortcode() {
+    return '<button type="submit" class="btn btn-info mt-2"><i class="icon-paper-plane-empty me-2"></i> Send Message</button>';
+}
+add_shortcode('cf7_icon_button', 'cf7_icon_button_shortcode');
+
+add_filter('wpcf7_form_elements', function($content) {
+    $content = preg_replace('/<input type="submit" value="([^"]*)" class="([^"]*)"/', 
+        '<button type="submit" class="$2"><i class="icon-paper-plane-empty me-2"></i> $1</button>', 
+        $content);
+    return $content;
+});

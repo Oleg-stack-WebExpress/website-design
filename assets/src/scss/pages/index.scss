@@ -1,9 +1,42 @@
 body {
+    position: relative;
     background-color: #222831;
+    margin: 0;
+    min-height: 100vh;
 
-    .reviews-section {
-        background: url('../images/doodle items.png') no-repeat center center;
-        background-size: cover;
+    /* Вертикальная линия */
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 512px;
+        width: 0.1px;
+        height: 100%;
+        background-color: white;
+        z-index: 1;
+        opacity: 0.15;
+        pointer-events: none;
+    }
+
+    /* Первая горизонтальная линия */
+    &::after {
+        content: '';
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: 0.1px;
+        background-color: white;
+        z-index: 1;
+        opacity: 0.15;
+        pointer-events: none;
+        box-shadow: 0 1600px 0 white;
+        /* Вторая линия через отступ */
+    }
+
+    .recent-works-section {
+        background: url('../images/doodle items.png') repeat;
+        background-size: 33.33% 33.33%;
         padding-top: 200px;
         padding-bottom: 200px;
         position: relative;
@@ -15,12 +48,12 @@ body {
             left: 0;
             right: 0;
             bottom: 0;
-            z-index: 0;
+            z-index: 2;
         }
 
         .container {
             position: relative;
-            z-index: 1;
+            z-index: 3;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 15px;
@@ -36,12 +69,12 @@ body {
             padding-left: 15px;
         }
 
-        .reviews-carousel-wrapper {
+        .recent-works-carousel-wrapper {
             position: relative;
             width: 100%;
 
             .owl-carousel {
-                .single-review-item {
+                .single-recent-works-item {
                     display: flex !important;
                     align-items: center;
                     justify-content: center;
@@ -51,7 +84,7 @@ body {
                     border-radius: 16px;
                     padding: 20px;
                     position: relative;
-                    margin: 0 10px; // Отступы между элементами
+                    margin: 0 10px;
                 }
             }
         }
@@ -59,6 +92,48 @@ body {
 
     .block-form {
         padding: 200px 0px 200px 0px;
+
+        .container {
+            position: relative;
+            min-height: 500px;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -157px;
+            left: 761px;
+            width: 300px;
+            height: 101px;
+            background: url('../images/keyboard.png') no-repeat;
+            background-size: contain;
+            z-index: 1;
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            bottom: 208px;
+            right: 1027px;
+            width: 208px;
+            height: 105px;
+            background: url('../images/Vector 186.png') no-repeat;
+            background-size: contain;
+            z-index: 1;
+        }
+
+        /* Для третьего изображения создаем дополнительный элемент */
+        .container .mail-icon {
+            position: absolute;
+            top: 95%;
+            left: 93%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: url('../images/mail.png') no-repeat;
+            background-size: contain;
+            z-index: 1;
+        }
 
         .man {
             margin: 30px 150px 30px 0px;
@@ -72,43 +147,35 @@ body {
                 background-color: #393E46;
                 border: none;
                 padding: 5px;
-
                 opacity: 0.75;
             }
 
             #name-field {
                 height: 300px;
+
+                &::placeholder {
+                    vertical-align: top !important;
+                    line-height: 1 !important;
+                    position: relative !important;
+                    top: -135px !important;
+                }
             }
 
-            #name-field::placeholder {
-                vertical-align: top !important;
-                line-height: 1 !important;
-                position: relative !important;
-                top: -135px !important;
-                /* Подстройте значение */
+            .form-control {
+                &::placeholder {
+                    color: #EEEEEE;
+                    top: 0;
+                    opacity: 0.5;
+                    padding-left: 6px;
+                }
             }
-
-            .form-control::placeholder {
-                color: #EEEEEE;
-                top: 0;
-                opacity: 0.5;
-            }
-
-
         }
 
         .btn-info {
             border-radius: 20px;
             color: #eee;
             text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
-            /* Тень текста */
+            max-height: 40px;
         }
-
-        /* 
-        .btn-info::before {
-            content: "✈";
-            
-            margin-right: 6px;
-        }сделать на фонтелло*/
     }
 }
