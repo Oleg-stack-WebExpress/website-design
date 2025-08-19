@@ -2,10 +2,10 @@ body {
     background-color: #222831;
 
     .reviews-section {
-
-        background:  url('../images/doodle items.png') no-repeat center center;
+        background: url('../images/doodle items.png') no-repeat center center;
         background-size: cover;
-        padding: 1rem 0;
+        padding-top: 200px;
+        padding-bottom: 200px;
         position: relative;
 
         &::before {
@@ -15,12 +15,100 @@ body {
             left: 0;
             right: 0;
             bottom: 0;
-            
             z-index: 0;
         }
 
-        .why-we__title {
-            color: #EEEEEE;
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+
+            &.container-carousel {
+                padding-top: 30px;
+            }
         }
+
+        .box-title {
+            margin-bottom: 48px;
+            text-align: left;
+            padding-left: 15px;
+        }
+
+        .reviews-carousel-wrapper {
+            position: relative;
+            width: 100%;
+
+            .owl-carousel {
+                .single-review-item {
+                    display: flex !important;
+                    align-items: center;
+                    justify-content: center;
+                    box-sizing: border-box;
+                    height: 100%;
+                    background: rgba(57, 62, 70, 0.8);
+                    border-radius: 16px;
+                    padding: 20px;
+                    position: relative;
+                    margin: 0 10px; // Отступы между элементами
+                }
+            }
+        }
+    }
+
+    .block-form {
+        padding: 200px 0px 200px 0px;
+
+        .man {
+            margin: 30px 150px 30px 0px;
+            text-align: right;
+        }
+
+        .text-form {
+            color: #eee;
+
+            .form-control {
+                background-color: #393E46;
+                border: none;
+                padding: 5px;
+
+                opacity: 0.75;
+            }
+
+            #name-field {
+                height: 300px;
+            }
+
+            #name-field::placeholder {
+                vertical-align: top !important;
+                line-height: 1 !important;
+                position: relative !important;
+                top: -135px !important;
+                /* Подстройте значение */
+            }
+
+            .form-control::placeholder {
+                color: #EEEEEE;
+                top: 0;
+                opacity: 0.5;
+            }
+
+
+        }
+
+        .btn-info {
+            border-radius: 20px;
+            color: #eee;
+            text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+            /* Тень текста */
+        }
+
+        /* 
+        .btn-info::before {
+            content: "✈";
+            
+            margin-right: 6px;
+        }сделать на фонтелло*/
     }
 }

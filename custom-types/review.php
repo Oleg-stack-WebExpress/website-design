@@ -79,6 +79,8 @@ function review_shortcode($attr)
 
             $html .= '<div class="single-review-item">';
             if ($thumbnail) {
+                $html .= '<div class="row">';
+                $html .= '<div class="col-4">';
                 $html .= '<a href="' . esc_url($thumbnail) . '" class="post-popup-link">';
                 $html .= '<img src="' . esc_url($thumbnail) . '" class="single-review-item__image" alt="' . esc_attr(get_the_title()) . '" width="300" height="300">';
                 $html .= '</a>';
@@ -98,6 +100,7 @@ function review_shortcode($attr)
 
     return $html;
 }
+
 
 // Функция для добавления класса popup к изображениям в контенте
 if (!function_exists('add_popup_class_to_images')) {
