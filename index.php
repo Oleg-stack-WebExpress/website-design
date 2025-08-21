@@ -29,7 +29,7 @@ get_header();
     <div class="container">
         <div class="mail-icon"></div>
         <div class="row">
-            <div class="col-6">
+            <div class="col-md-6 col-12">
                 <div class="why-we__title"><a href="<?php echo esc_url(home_url('/')); ?>"
                         style="text-decoration: none; color: inherit;"><img
                             src="<?php echo esc_url(get_template_directory_uri() . '/assets/dist/images/Got a project in mind_.png'); ?>"
@@ -39,7 +39,7 @@ get_header();
                             src="<?php echo esc_url(get_template_directory_uri() . '/assets/dist/images/Group 2372.png'); ?>"
                             alt="SaulDesign Logo"></a></div>
             </div>
-            <div class="col-6">
+            <div class="col-md-6 col-12">
                 <?php
                 echo do_shortcode('[contact-form-7 id="de14f34" title="Форма заявок"]');
                 ?>
@@ -49,7 +49,7 @@ get_header();
 </section>
 
 
-</div>
+
 
 <?php
 get_footer();
